@@ -15,12 +15,14 @@ const purches = require('./router/Purches')
 const sales = require('./router/Sales')
 const profit = require('./router/Profit')
 const address = require('./router/Address')
+const scan = require('./router/Scan')
 
 app.use("/product",product)
 app.use("/purches",purches)
 app.use("/sales",sales)
 app.use("/profit",profit)
 app.use("/address",address)
+app.use("/scan",scan)
 
 
 app.get("/",(req,res)=>{
@@ -39,7 +41,7 @@ mongoose.connect(url,{ useUnifiedTopology: true, useNewUrlParser: true, useFindA
     }
 })
 
-app.listen(Port,()=>{
+app.listen(Port,()=>{   
     console.log("Server run port 2000")
 })
 
